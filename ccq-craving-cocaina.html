@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cuestionario de craving por cocaína (CCQ breve, 10 ítems)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f7f8;--card:#fff;--ink:#16252b;--mute:#5a6b72;--line:#d5dee2;--acc:#0e6b73;--acc-ink:#fff;--soft:#e3f1f2;--warn:#8a5a00;--warn-bg:#fff4dc;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10181b;--card:#182327;--ink:#e6eef0;--mute:#9fb0b6;--line:#2b3a40;--acc:#4fb8c1;--acc-ink:#07262a;--soft:#1d3a3e;--warn:#f0c46b;--warn-bg:#2d2514}}
+:root[data-theme="dark"]{--bg:#10181b;--card:#182327;--ink:#e6eef0;--mute:#9fb0b6;--line:#2b3a40;--acc:#4fb8c1;--acc-ink:#07262a;--soft:#1d3a3e;--warn:#f0c46b;--warn-bg:#2d2514}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 "Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:760px;margin:0 auto;padding:28px 18px 150px}
+h1{font:700 29px/1.2 "Source Serif 4",Georgia,serif;margin:0 0 6px}
+h2{font:700 21px/1.3 "Source Serif 4",Georgia,serif;margin:36px 0 10px}
+.sub{color:var(--mute);margin:0 0 18px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px 18px}
+.box p{margin:0 0 8px}.box p:last-child{margin:0}
+.note{background:var(--warn-bg);color:var(--warn);border-radius:8px;padding:12px 16px;font-size:15px;margin-top:12px}
+fieldset{border:1px solid var(--line);border-radius:8px;background:var(--card);margin:0 0 12px;padding:14px 16px 12px;min-width:0}
+legend{font-weight:600;padding:0 6px;max-width:100%}
+legend .n{color:var(--acc);margin-right:6px}
+.inv{display:inline-block;font-size:13px;font-weight:600;color:var(--acc);background:var(--soft);border-radius:4px;padding:0 6px;margin-left:6px;white-space:nowrap}
+.opts{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:6px}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts label{display:flex;align-items:center;justify-content:center;height:44px;border:1px solid var(--line);border-radius:6px;cursor:pointer;font-weight:600;background:var(--bg)}
+.opts label:hover{border-color:var(--acc)}
+.opts input:checked+label{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+.opts input:focus-visible+label{outline:3px solid var(--acc);outline-offset:2px}
+.ends{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--mute);margin-top:6px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);padding:12px 18px calc(12px + env(safe-area-inset-bottom,0px))}
+.bar .in{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.stat{display:flex;flex-direction:column;min-width:84px}
+.stat b{font:700 28px/1.1 "Source Serif 4",Georgia,serif}
+.stat span{font-size:13px;color:var(--mute)}
+.prog{flex:1;min-width:120px}
+.prog div{height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--acc);transition:width .2s}
+.prog span{font-size:13px;color:var(--mute)}
+button{font:600 15px "Source Sans 3",system-ui,sans-serif;background:transparent;color:var(--acc);border:1px solid var(--acc);border-radius:6px;padding:8px 14px;cursor:pointer}
+button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.res{margin-top:6px}
+.res table{width:100%;border-collapse:collapse;font-size:16px}
+.res td{padding:6px 0;border-bottom:1px solid var(--line)}.res td:last-child{text-align:right;font-weight:700}
+ol.ref{padding-left:20px;font-size:15px}ol.ref li{margin-bottom:8px}
+.wrap{overflow-x:auto}
+@media (max-width:520px){h1{font-size:25px}.opts{gap:4px}.opts label{height:42px}}
+@media (prefers-reduced-motion:reduce){.prog i{transition:none}}
+</style>
+</head>
+<body>
+<main>
+<h1>Cuestionario de craving por cocaína</h1>
+<p class="sub">CCQ breve, 10 ítems (versión en español, Muñoz et al., 2010). Mide el deseo de consumir cocaína en este momento.</p>
+
+<div class="box">
+<p><b>Instrucciones para la persona que responde.</b> Indica en qué grado estás de acuerdo o en desacuerdo con cada frase. Estamos interesados en tus pensamientos y sentimientos <b>ahora mismo</b>, mientras rellenas este cuestionario. Responde todas las frases.</p>
+<p>Escala: 1 = Totalmente en desacuerdo, 7 = Totalmente de acuerdo.</p>
+</div>
+
+<h2>Ítems</h2>
+<form id="f" onsubmit="return false"></form>
+
+<h2>Resultado</h2>
+<div class="box res" id="res"><p style="color:var(--mute)">Responde los 10 ítems para ver el puntaje.</p></div>
+<div class="note"><b>Sin puntos de corte.</b> Las fuentes consultadas para esta versión no publican puntos de corte validados, por lo que la página no clasifica el craving en niveles. A mayor puntaje, mayor intensidad de craving. Herramienta educativa; no sustituye la evaluación clínica.</div>
+
+<h2>Cómo se puntúa</h2>
+<div class="box">
+<p>Los ítems 4 y 7 están redactados en sentido contrario y se invierten antes de sumar (1↔7, 2↔6, 3↔5, 4 se mantiene; es decir, 8 menos la respuesta).</p>
+<p><b>Puntaje total</b> = suma de los 10 ítems (rango 10 a 70). <b>Media</b> = total ÷ 10 (rango 1 a 7).</p>
+<p>La versión breve se analiza como un solo puntaje total.</p>
+</div>
+
+<h2>Referencias</h2>
+<ol class="ref">
+<li>Muñoz, M. A., Martínez, J. A., Fernández-Santaella, M. C., Vila, J., &amp; Cepeda-Benito, A. (2010). Two scales to evaluate cocaine craving. <i>Substance Use &amp; Misuse, 45</i>(9), 1303–1318. https://doi.org/10.3109/10826081003682263</li>
+<li>Muñoz, M. A., Martínez, J. A., Tejero, A., &amp; Cepeda-Benito, A. (2008). Development of the brief Spanish Cocaine Craving Questionnaire-General. <i>Psicothema, 20</i>(4), 545–550.</li>
+<li>Sussner, B. D., Smelson, D. A., Rodrigues, S., Kline, A., Losonczy, M., &amp; Ziedonis, D. (2006). The validity and reliability of a brief measure of cocaine craving. <i>Drug and Alcohol Dependence, 83</i>(3), 233–237. https://doi.org/10.1016/j.drugalcdep.2005.11.022</li>
+<li>Tiffany, S. T., Singleton, E., Haertzen, C. A., &amp; Henningfield, J. E. (1993). The development of a cocaine craving questionnaire. <i>Drug and Alcohol Dependence, 34</i>(1), 19–28. https://doi.org/10.1016/0376-8716(93)90042-O</li>
+<li>Marín-Navarrete, R., Mejía-Cruz, D., Templos-Núñez, L., et al. (2011). Validation of a cocaine craving questionnaire (CCQ-G) in Mexican population. <i>Salud Mental, 34</i>(6), 491–496.</li>
+<li>Ojeda Aguilar, Y. L., &amp; Martínez Martínez, K. I. (2026). Adaptación y validación del Cocaine Craving Questionnaire-Brief (CCQ-B) en población mexicana consumidora de metanfetamina de centros residenciales. <i>Revista Internacional de Investigación en Adicciones, 12</i>(1), e414. https://doi.org/10.28931/riiad.2026.414</li>
+</ol>
+</main>
+
+<div class="bar"><div class="in">
+<div class="stat"><b id="tot">—</b><span>Puntaje total</span></div>
+<div class="stat"><b id="avg">—</b><span>Media (1–7)</span></div>
+<div class="prog"><div><i id="pi"></i></div><span id="pt">0 de 10 respondidos</span></div>
+<button type="button" id="rs">Reiniciar</button>
+</div></div>
+
+<script>
+var ITEMS=[
+["Me apetece tanto tomar cocaína que casi puedo saborearla.",0],
+["Tengo el impulso de tomar cocaína.",0],
+["Voy a tomar cocaína tan pronto como sea posible.",0],
+["Creo que podría resistirme y no tomar “coca” ahora.",1],
+["Tengo un deseo irresistible de “coca” ahora mismo.",0],
+["Lo único que quiero tomar ahora es cocaína.",0],
+["No deseo tomar cocaína ahora mismo.",1],
+["Tomar cocaína ahora haría que todo pareciera perfecto.",0],
+["Tomaré cocaína tan pronto como tenga oportunidad.",0],
+["Nada sería mejor que tomar “coca” justo en este momento.",0]];
+var f=document.getElementById("f");
+ITEMS.forEach(function(it,i){
+ var h='<fieldset><legend><span class="n">'+(i+1)+'.</span>'+it[0]+(it[1]?'<span class="inv">ítem inverso</span>':'')+'</legend><div class="opts">';
+ for(var v=1;v<=7;v++){h+='<input type="radio" name="q'+i+'" id="q'+i+'_'+v+'" value="'+v+'"><label for="q'+i+'_'+v+'">'+v+'</label>';}
+ h+='</div><div class="ends"><span>Totalmente en desacuerdo</span><span>Totalmente de acuerdo</span></div></fieldset>';
+ f.insertAdjacentHTML("beforeend",h);
+});
+function calc(){
+ var n=0,sum=0,rows="";
+ ITEMS.forEach(function(it,i){
+  var c=f.querySelector('input[name="q'+i+'"]:checked');
+  if(c){n++;var v=+c.value;var s=it[1]?8-v:v;sum+=s;rows+='<tr><td>Ítem '+(i+1)+(it[1]?' (invertido: '+v+' → '+s+')':'')+'</td><td>'+s+'</td></tr>';}
+ });
+ document.getElementById("pi").style.width=(n*10)+"%";
+ document.getElementById("pt").textContent=n+" de 10 respondidos";
+ var t=document.getElementById("tot"),a=document.getElementById("avg"),r=document.getElementById("res");
+ if(n===10){
+  t.textContent=sum;a.textContent=(sum/10).toFixed(1);
+  r.innerHTML='<table><tr><td>Puntaje total (10–70)</td><td>'+sum+'</td></tr><tr><td>Media (1–7)</td><td>'+(sum/10).toFixed(2)+'</td></tr></table><details style="margin-top:10px"><summary>Ver puntaje por ítem</summary><table>'+rows+'</table></details>';
+ }else{
+  t.textContent="—";a.textContent="—";
+  r.innerHTML='<p style="color:var(--mute)">Responde los 10 ítems para ver el puntaje.</p>';
+ }
+}
+f.addEventListener("change",calc);
+document.getElementById("rs").addEventListener("click",function(){f.reset();calc();window.scrollTo(0,0);});
+</script>
+</body>
+</html>
